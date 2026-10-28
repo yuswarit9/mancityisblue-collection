@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man City Legends - Stats</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h2><i class="fa-solid fa-shield-halved"></i> MAN CITY LEGENDS</h2>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="page2.html">Squad</a>
+                <a href="page3.html" class="active">Stats</a>
+                <a href="page4.html">Matchday</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-card">
+            <span class="badge"><i class="fa-solid fa-trophy"></i> Club Statistics & Trophies</span>
+            <h1>สถิติและผลงาน <br><span class="highlight">ระบบกรองข้อมูลด้วย JS</span></h1>
+            <p>เลย์เอาต์ระบบกรองข้อมูลแชมป์ตามประเภทแข่งขันแบบ Interactive</p>
+        </section>
+
+        <!-- JS Interactive Filter Buttons -->
+        <div class="filter-controls" style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px;">
+            <button class="filter-btn active" onclick="filterStats('all', event)">ทั้งหมด</button>
+            <button class="filter-btn" onclick="filterStats('domestic', event)">บอลถ้วยในประเทศ</button>
+            <button class="filter-btn" onclick="filterStats('europe', event)">บอลยุโรป</button>
+        </div>
+
+        <!-- Layout Grid System -->
+        <section class="squad-section">
+            <div class="card-grid" id="statsGrid">
+                <!-- Premier League -->
+                <div class="card stat-item domestic">
+                    <div class="card-content">
+                        <span class="rank-badge">DOMESTIC LEAGUE</span>
+                        <h3>Premier League</h3>
+                        <p>คว้าแชมป์ทั้งหมด <strong>10 สมัย</strong> (ฤดูกาลล่าสุด 2023-24)</p>
+                    </div>
+                </div>
+
+                <!-- UEFA Champions League -->
+                <div class="card stat-item europe">
+                    <div class="card-content">
+                        <span class="rank-badge">EUROPEAN CHAMPION</span>
+                        <h3>UEFA Champions League</h3>
+                        <p>คว้าแชมป์ยุโรปยิ่งใหญ่ <strong>1 สมัย</strong> (ฤดูกาล 2022-23)</p>
+                    </div>
+                </div>
+
+                <!-- FA Cup -->
+                <div class="card stat-item domestic">
+                    <div class="card-content">
+                        <span class="rank-badge">DOMESTIC CUP</span>
+                        <h3>FA Cup</h3>
+                        <p>คว้าแชมป์เอฟเอคัพ <strong>7 สมัย</strong> (ฤดูกาลล่าสุด 2022-23)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 24px 0; color: #64748b; font-size: 14px;">
+        <p style="font-weight: 700; letter-spacing: 1px;">SUPERBIA IN PROELIO</p>
+        <p>© Manchester City FC Website Project</p>
+    </footer>
+
+    <!-- Link JavaScript File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
